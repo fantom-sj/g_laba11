@@ -1,0 +1,12 @@
+calc_me: calculate.o main.o
+	gcc calculate.o main.o -o calc_me -lm
+calculate.o: calculate.c calculate.h
+	gcc -c calculate.c
+main.o: main.c calculate.h
+	gcc -c main.c
+clean:
+	rm -f calc_me calculate.o main.o
+install:
+	cp calc_me /usr/local/bin/calc_me
+uninstall: 
+	rm -f /usr/local/bin/calc_me
