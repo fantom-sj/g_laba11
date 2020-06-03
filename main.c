@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "calculate.h"
 
-int main(void) //Коментрий 2
+int main(void)
 {
 float Numeral;
 char Operation[4];
